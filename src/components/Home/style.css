@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+.home {
+    flex-grow:1;
+    min-width: 100;
+    display: flex;
+    align-items: center;
+}
+.home .title{
+    line-height:50px
+}
+.home .title button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 30px;
+    color: aliceblue;
+    padding:10px 15px;
+    border-radius: 999px;
+    background-color: blue;
+    font-family: 'Syne Mono', monospace;
+}
+.home{
+    width:100%;
+    margin-top: 20px;
+}
+.home .person{
+    width:80%;
+}
+
+.wrapper{
+  display: flex;
+}
+.wrapper .static-txt{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #3010be;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #18458a;
+  border-left: 2px solid #6dfc9d;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+@media(min-width:800px){
+    .home{
+
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .home .person{
+        width: 50%;
+        margin-top: 0%;
+        text-align: left;
+        font-size:25px
+    }
+    .home .person img{
+        width:100%
+    }
+}
+p{
+    font-family:"Merriweather', serif" ;
+}
+.image{
+    border-radius: 50%;
+    padding-left: 1cm;
+    position: relative;
+
+}
+.person{
+    width: 100%;
+
+}
